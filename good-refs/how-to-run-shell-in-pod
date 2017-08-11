@@ -1,0 +1,27 @@
+https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/
+
+Create the Pod:
+kubectl create -f https://k8s.io/docs/tasks/debug-application-cluster/shell-demo.yaml
+Verify that the Container is running:
+kubectl get pod shell-demo
+Get a shell to the running Container:
+kubectl exec -it shell-demo -- /bin/bash
+In your shell, list the running processes:
+root@shell-demo:/# ps aux
+
+content of https://k8s.io/docs/tasks/debug-application-cluster/shell-demo.yaml 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shell-demo
+spec:
+  volumes:
+  - name: shared-data
+    emptyDir: {}
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - name: shared-data
+      mountPath: /usr/share/nginx/html
