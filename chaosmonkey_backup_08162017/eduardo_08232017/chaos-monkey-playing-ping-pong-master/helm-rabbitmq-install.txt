@@ -1,0 +1,15 @@
+
+
+
+helm install --name my-release \
+  --set rabbitmqUsername=admin,rabbitmqPassword=secretpassword,rabbitmqErlangCookie=secretcookie \
+    stable/rabbitmq
+
+Uninstalling the Chart
+
+To uninstall/delete the my-release deployment:
+
+$ helm delete my-release
+
+
+https://kubeapps.com/charts/stable/rabbitmq
