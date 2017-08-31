@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: commentator
+spec:
+  replicas: 1
+  selector:
+  template:
+    metadata:
+      labels:
+        app: commentator
+    spec:
+      containers:
+      - name: commentator
+        image: patrocinio/ping_pong_commentator

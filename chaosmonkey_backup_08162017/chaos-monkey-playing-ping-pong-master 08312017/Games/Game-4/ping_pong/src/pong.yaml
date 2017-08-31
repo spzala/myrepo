@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: pong
+spec:
+  replicas: 1
+  selector:
+  template:
+    metadata:
+      labels:
+        app: pong
+    spec:
+      containers:
+      - name: pong
+        image: patrocinio/ping_pong
+        env:
+        - name: QUEUE
+          value: "pong"
+        - name: OTHER_QUEUE
+          value: "ping"

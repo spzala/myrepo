@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  name: pong
+spec:
+  replicas: 1
+  selector:
+  template:
+    metadata:
+      labels:
+        app: pong
+    spec:
+      containers:
+      - name: pong
+        image: patrocinio/ping_pong
+        env:
+        - name: QUEUE_NAME
+          value: "pong"
+        - name: OTHER_QUEUE_NAME
+          value: "ping"
+        - name:  QUEUE 
+          value: "queue-rabbitmq.ping-pong.svc.cluster.local"
+

@@ -1,0 +1,13 @@
+1. create_namespace.sh - OK
+2. deploy_tiler.sh OK
+2. deploy_queue.sh - OK
+3. build_throw_ball.sh - OK
+4. build_commentator.sh - OK
+5. deploy_commentator.sh - OK
+6. build_ping_pong.sh - OK
+7. deploy_ping.sh - OK
+8. deploy_pong.sh - OK
+9. deploy_throw_ball.sh - OK
+
+
+
