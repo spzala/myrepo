@@ -1,5 +1,0 @@
-apiVersion: v1
-description: Ping pong helm chart
-name: ping_pong_chart
-version: 0.1.0
-icon: https://rlv.zcache.com/parisian_monkey_ping_pong_paddle-r0b90b52c72264fefbf87e888e5a7f7d0_zvmtu_324.jpg?rlvnet=1
