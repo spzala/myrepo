@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: draft1-pod
+spec:
+  containers:
+  - name: draft1-container
+    image: spzala/pingpongdraft1
+  restartPolicy: Always

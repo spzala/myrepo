@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: heattranslatorcontainer
+spec:
+  restartPolicy: Never
+  containers:
+    - name: heattranslator-container
+      image: spzala/heat-translator
+  imagePullSecrets:
+    - name: regsecret

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-localimage-pod
+spec:
+  containers:
+  - name: hellow-localimage-container
+    image: hellow

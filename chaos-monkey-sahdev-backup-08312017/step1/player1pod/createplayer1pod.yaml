@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: player1container
+spec:
+  restartPolicy: Never
+  containers:
+    - name: player1-container
+      image: spzala/ping_pong_throw_ball
+  imagePullSecrets:
+    - name: regsecret
